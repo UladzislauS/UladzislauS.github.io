@@ -1,0 +1,20 @@
+<input type="text" ng-model="filter.name" placeholder="Filter">
+
+<table>
+	<thead>
+		<tr>
+			<th>Name</th>
+			<td>Phone</td>
+			<td>E-mail</td>
+			<td class="creating"><a class="edit" ui-sref="create">+</a></td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat = "contact in contacts | sortingContacts | filterContacts: filter.name">
+			<th>{{contact.name}}</th>
+			<td>{{contact.phone}}</td>
+			<td>{{contact.email}}</td>
+			<td class="editting"><a class="edit" ui-sref="edit({key: objectStringify(contact)})">&#9998</a></td>
+		</tr>
+	</tbody>
+</table>

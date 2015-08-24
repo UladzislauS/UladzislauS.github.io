@@ -1,0 +1,96 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	width: 100%;
+	height: 100%;
+}
+
+.page {
+	max-width: 600px;
+	margin: 0 auto;
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	text-align: center;
+}
+
+h1 {
+	background-color: #9FD0B2;
+}
+
+.container {
+	width: 100%;
+	background-color: #F7F7F7;
+	padding: 10px 0;
+}
+
+input {
+	width: 50%;
+	height: 30px;
+	margin: 5px;
+	border-radius: 5px;
+	background-color: #C7FFD3;
+}
+
+table {
+	margin: 10px auto;
+	width: 90%;
+}
+
+thead {
+	background-color: #fff;
+}
+
+tbody {
+	background-color: #CEDCD1;
+}
+
+.editting {
+	background-color: #DEE08C;
+	border-radius: 2px;
+	-webkit-box-shadow: inset 1px 1px rgba(0, 0, 0, 0.5);
+	box-shadow: inset 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.creating {
+	background-color: #F3F902;
+	border-radius: 2px;
+	-webkit-box-shadow: inset 1px 1px rgba(0, 0, 0, 0.5);
+	box-shadow: inset 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.edit {
+	display: block;
+	width: 100%;
+	height: 100%;
+	text-decoration: none;
+	font-size: 1.1em;
+	color: #7D43DC;
+}
+
+.button {
+	width: 30%;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.close {
+	background-color: #D2D2D2;
+}
+
+.save {
+	background-color: #EFFF8E;
+}
+
+.delete {
+	background-color: #F77676;
+}
+
+.error {
+	color: #FF4747;
+}
+
+input.ng-invalid-maxlength, input.ng-invalid-pattern, input.ng-invalid-email {
+	background-color: #F79393;
+}

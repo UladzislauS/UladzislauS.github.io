@@ -1,0 +1,28 @@
+<div>
+	<form name = "creatingForm" ng-submit="save()" novalidate>
+		
+		<div  class = "name">
+			<label for="name">Name:</label>
+			<input name="name" id="name" type="text" ng-model="newPerson.name" ng-maxlength="20" required>
+			<p class="error" ng-show="creatingForm.name.$error.maxlength">Name cannot be longer than 20 characters</p>
+		</div>
+		
+		<div class = "phone">
+			<label for="phone">Phone</label>
+			<input name="phone" id="phone" type="text" ng-model="newPerson.phone" ng-pattern="/[0-9\+\*\#]+$/" ng-maxlength="13" required>
+			<p class="error" ng-show="creatingForm.phone.$error.maxlength">Phone cannot be longer than 13 characters</p>
+			<p class="error" ng-show="creatingForm.phone.$error.pattern">Phone can consist of numbers or characters &#34+&#34 &#34+&#34 &#34+&#34</p>
+		</div>
+		
+		<div class = "email">
+			<label for="email">E-mail</label>
+			<input name="email" type="email" id="email" ng-model="newPerson.email" required>
+			<p class="error" ng-show="creatingForm.email.$error.email">Invalid email adress</p>
+		</div>
+
+		<input type="button" value="Close" class="button close" ui-sref="home" >
+		<input type="button" value="Delete" class="button delete" ng-show="key != undefined" ng-click="delete()">
+		<input type="submit" value="Save" class="button save" ng-disabled="creatingForm.name.$invalid && creatingForm.phone.$invalid && creatingForm.email.$invalid">
+		<p class="error" ng-show="error">{{error}}</p>
+	</form>
+</div>
