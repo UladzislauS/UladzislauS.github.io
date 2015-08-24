@@ -11,7 +11,7 @@
 			<label for="phone">Phone</label>
 			<input name="phone" id="phone" type="text" ng-model="newPerson.phone" ng-pattern="/[0-9\+\*\#]+$/" ng-maxlength="13" required>
 			<p class="error" ng-show="creatingForm.phone.$error.maxlength">Phone cannot be longer than 13 characters</p>
-			<p class="error" ng-show="creatingForm.phone.$error.pattern">Phone can consist of numbers or characters &#34+&#34 &#34+&#34 &#34+&#34</p>
+			<p class="error" ng-show="creatingForm.phone.$error.pattern">Phone can consist of numbers or characters &#34+&#34 &#34*&#34 &#34#&#34</p>
 		</div>
 		
 		<div class = "email">
